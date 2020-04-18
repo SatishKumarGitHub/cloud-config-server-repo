@@ -1,0 +1,18 @@
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+
+microservice:
+  paymet-service:
+    enpoints:
+      enpoint:
+        uri: http://PAYMENT-SERVICE/api/payment/make-payment
+  order-service:
+    enpoints:
+      enpoint:
+        uri:http://ORDER-SERVICE/api/order/place
